@@ -17,6 +17,8 @@ let total = puntajeJugador1 + puntajeJugador2;
 
 alert("¡Bienvenidx a PIEDRA, PAPEL o TIJERA!")
 
+
+for (let i = 0; i <= 1; i++) {
 usuario1 = prompt("USUARIO 1: Por favor ingrese una opción: piedra, papel o tijera");
 usuario2 = prompt("USUARIO 2: Por favor ingrese una opción: piedra, papel o tijera");
 
@@ -44,7 +46,7 @@ else if (usuario1 === piedra && usuario2 === piedra) {
 }
 
 else if (usuario1 === piedra && usuario2 === tijera) {
-    alert(`Usuario 1 ganaste este turno!`)
+    alert(`¡Usuario 1 ganaste este turno!`)
     puntajeJugador1++
 }
 
@@ -58,7 +60,7 @@ else if (usuario1 === papel && usuario2 === piedra) {
 }
 
 else if (usuario1 === papel && usuario2 === tijera) {
-    alert(`Usuario 2 ganaste este turno!`)
+    alert(`¡Usuario 2 ganaste este turno!`)
     puntajeJugador2++
 }
 
@@ -66,52 +68,15 @@ else {
     alert(`¡Lo siento! No ingresaste nada`)
 }
 
-
-for (let i = 0; i >= 2; i++) {
-    if (usuario1 === tijera && usuario2 === papel) {
-        alert(`¡Usuario 1 ganaste este turno!`)
-        puntajeJugador1++
-    }
-    
-    else if (usuario1 === tijera && usuario2 === piedra) {
-        alert(`¡Usuario 2 ganaste este turno!`)
-        puntajeJugador2++
-    }
-    
-    else if (usuario1 === tijera && usuario2 === tijera) {
-        alert(`¡Esto es un EMPATE!`)
-    }
-    
-    else if (usuario1 === piedra && usuario2 === papel) {
-        alert(`¡Usuario 2 ganaste este turno!`)
-        puntajeJugador2++
-    }
-    
-    else if (usuario1 === piedra && usuario2 === piedra) {
-        alert(`¡Esto es un EMPATE!`)
-    }
-    
-    else if (usuario1 === piedra && usuario2 === tijera) {
-        alert(`Usuario 1 ganaste este turno!`)
-        puntajeJugador1++
-    }
-    
-    else if (usuario1 === papel && usuario2 === papel) {
-        alert(`¡Esto es un EMPATE!`)
-    }
-    
-    else if (usuario1 === papel && usuario2 === piedra) {
-        alert(`¡Usuario 1 ganaste este turno!`)
-        puntajeJugador1++
-    }
-    
-    else if (usuario1 === papel && usuario2 === tijera) {
-        alert(`Usuario 2 ganaste este turno!`)
-        puntajeJugador2++
-    }
-    
-    else {
-        alert(`¡Lo siento! No ingresaste nada`)
-    }   
 }
-    
+
+if (puntajeJugador1 > 0 && puntajeJugador2 === 0) {
+alert("¡El ganador es Jugador 1!");
+}
+else if (puntajeJugador1 === 0 && puntajeJugador2 > 0){
+alert("¡El ganador es Jugador 2!");
+}
+else {
+    alert("¡Jugador 1 y Jugador 2 han empatado!")
+}
+
